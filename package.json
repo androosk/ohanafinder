@@ -1,0 +1,22 @@
+{
+  "name": "ohanufinder",
+  "version": "1.0.0",
+  "description": "ohanu finder",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/androosk/ohanufinder.git"
+  },
+  "author": "Andrew Tirpok",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/androosk/ohanufinder/issues"
+  },
+  "homepage": "https://github.com/androosk/ohanufinder#readme",
+  "dependencies": {
+    "express": "^4.17.0"
+  }
+}
