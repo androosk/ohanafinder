@@ -1,0 +1,17 @@
+body {
+  background-color: lightcoral;
+}
+
+.jumbotron {
+  margin-top: 20px;
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/Stitch-PNG-Transparent.png");
+  height:10%;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
+.footer {
+  margin-top: -80px;
+}
