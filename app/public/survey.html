@@ -1,28 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>FriendFinder Survey Page</title>
-
-	<!-- Latest compiled and minified CSS & JS -->
---
-
-
-	<!-- Chosen -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
-
-	--
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Ohana Finder Survey</title>
+	<!-- Bootstrap, jQuery, and local CSS links -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-	<!-- Font Awesome Glyphicons -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-
-		<!-- Chosen -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<!-- Chosen - a jQuery plugin library by Harvest to prettify the survey menu -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
 
 </head>
 
@@ -41,7 +32,7 @@
 		<hr>
 
 		<h3><strong>Question 1</strong></h3>
-		<h4>You are always looking for an adventure.</h4>
+		<h4>You prefer order over chaos.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q1">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -52,7 +43,7 @@
       	</select>
 
 		<h3><strong>Question 2</strong></h3>
-		<h4>Generally speaking, you rely more on your instinct than your imagination.</h4>
+		<h4>You prefer a night at home with your aminals to going out with friends.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q2">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -64,7 +55,7 @@
 
 
 		<h3><strong>Question 3</strong></h3>
-		<h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
+		<h4>You can only get things done under pressure.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q3">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -76,7 +67,7 @@
 
 
 		<h3><strong>Question 4</strong></h3>
-		<h4>You are generally an outdoors person.</h4>
+		<h4>You prefer the great outdoors to staying inside.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q4">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -88,7 +79,7 @@
 
 
 		<h3><strong>Question 5</strong></h3>
-		<h4>Generally you accept people are people and rarely upset you.</h4>
+		<h4>You are a people person.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q5">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -100,7 +91,7 @@
 
 
 		<h3><strong>Question 6</strong></h3>
-		<h4>You don't care to relate to other people’s feelings.</h4>
+		<h4>You would rather read a book than watch TV.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q6">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -112,7 +103,7 @@
 
 
 		<h3><strong>Question 7</strong></h3>
-		<h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
+		<h4>You are sensitive to the feelings of others in conversation.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q7">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -123,7 +114,7 @@
       	</select>
 
 		<h3><strong>Question 8</strong></h3>
-		<h4>You live more in dreams than reality.</h4>
+		<h4>You prefer your fantasies to your reality.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q8">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -134,7 +125,7 @@
       	</select>
 
 		<h3><strong>Question 9</strong></h3>
-		<h4>You care about the well being of others and whole heartedly listen when someone is upset.</h4>
+		<h4>You listen well and like to help others figure out how to solve their problems.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q9">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -145,7 +136,7 @@
       	</select>
 
 		<h3><strong>Question 10</strong></h3>
-		<h4>You would rather stay home watching TV then go out and socialize with others.</h4>
+		<h4>Aminals are family.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q10">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -165,7 +156,7 @@
 		<hr>
 	    <footer class="footer">
 	      <div class="container">
-		  <p><a href="/api/friends">API Friends List</a> | <a href="git@github.com:lvanok/FriendFinder.git">GitHub Repo</a></p>
+		  <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/androosk/ohanafinder">GitHub Repo</a></p>
 	      </div>
 	    </footer>
 
@@ -183,7 +174,7 @@
 	      </div>
 	      <div class="modal-body">
 	        <h2 id="matchName"></h2>
-	        <img id="matchImg" src="file:///Users/lisavanorden/Documents/RCB_files/week13_files/wk13_hw/friendfinder/assets/images/floya_avatar_pic.jpg" alt="">
+	        <img id="matchImg" src="" alt="">
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
