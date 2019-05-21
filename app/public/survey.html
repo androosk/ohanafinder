@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<!-- Chosen - a jQuery plugin library by Harvest to prettify the survey menu -->
@@ -20,153 +21,134 @@
 <body>
 
 	<div class="container">
-		<div>
-			<h2>Survey Questions</h2>
-			<h3><strong>Who are You?</strong></h3>
-			<h4>Name (Required)</h4>
+		<h2>Survey Questions</h2>
+		<h3><strong>Who are You?</strong></h3>
+		<h4>Name (Required)</h4>
 		<input type="text" name="" id="name" class="form-control" required >
-
 		<h4>Link to Photo Image (Required)</h4>
 		<input type="text" name="" id="photo" class="form-control" required >
-
 		<hr>
-
 		<h3><strong>Question 1</strong></h3>
 		<h4>You prefer order over chaos.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q1">
-	 		<option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-      	</select>
+		<select data-placeholder="" class="chosen-select" id="question-one">
+			<option value=""></option>
+			<option value="1">1 (Strongly Disagree)</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5 (Strongly Agree)</option>
+		</select>
 
 		<h3><strong>Question 2</strong></h3>
 		<h4>You prefer a night at home with your aminals to going out with friends.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q2">
-	 		<option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-      	</select>
-
+		<select data-placeholder="" class="chosen-select" id="question-two">
+			<option value=""></option>
+			<option value="1">1 (Strongly Disagree)</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5 (Strongly Agree)</option>
+		</select>
 
 		<h3><strong>Question 3</strong></h3>
 		<h4>You can only get things done under pressure.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q3">
-	 		<option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-      	</select>
-
+		<select data-placeholder="" class="chosen-select" id="question-three">
+		<option value=""></option>
+			<option value="1">1 (Strongly Disagree)</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5 (Strongly Agree)</option>
+		</select>
 
 		<h3><strong>Question 4</strong></h3>
 		<h4>You prefer the great outdoors to staying inside.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q4">
-	 		<option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-      	</select>
-
+		<select data-placeholder="" class="chosen-select" id="question-four">
+		<option value=""></option>
+			<option value="1">1 (Strongly Disagree)</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5 (Strongly Agree)</option>
+		</select>
 
 		<h3><strong>Question 5</strong></h3>
 		<h4>You are a people person.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q5">
-	 		<option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-      	</select>
-
+		<select data-placeholder="" class="chosen-select" id="question-five">
+		<option value=""></option>
+			<option value="1">1 (Strongly Disagree)</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5 (Strongly Agree)</option>
+		</select>
 
 		<h3><strong>Question 6</strong></h3>
 		<h4>You would rather read a book than watch TV.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q6">
-	 		<option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-      	</select>
-
+		<select data-placeholder="" class="chosen-select" id="question-six">
+		<option value=""></option>
+			<option value="1">1 (Strongly Disagree)</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5 (Strongly Agree)</option>
+		</select>
 
 		<h3><strong>Question 7</strong></h3>
 		<h4>You are sensitive to the feelings of others in conversation.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q7">
-	 		<option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-      	</select>
+		<select data-placeholder="" class="chosen-select" id="question-seven">
+		<option value=""></option>
+			<option value="1">1 (Strongly Disagree)</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5 (Strongly Agree)</option>
+		</select>
 
 		<h3><strong>Question 8</strong></h3>
 		<h4>You prefer your fantasies to your reality.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q8">
-	 		<option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-      	</select>
+		<select data-placeholder="" class="chosen-select" id="question-eight">
+		<option value=""></option>
+			<option value="1">1 (Strongly Disagree)</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5 (Strongly Agree)</option>
+		</select>
 
 		<h3><strong>Question 9</strong></h3>
 		<h4>You listen well and like to help others figure out how to solve their problems.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q9">
-	 		<option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-      	</select>
+		<select data-placeholder="" class="chosen-select" id="question-nine">
+		<option value=""></option>
+			<option value="1">1 (Strongly Disagree)</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5 (Strongly Agree)</option>
+		</select>
 
 		<h3><strong>Question 10</strong></h3>
 		<h4>Aminals are family.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q10">
-	 		<option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-      	</select>
-
-		<br>
-		<br>
-
+		<select data-placeholder="" class="chosen-select" id="question-ten">
+		<option value=""></option>
+			<option value="1">1 (Strongly Disagree)</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5 (Strongly Agree)</option>
+		</select>
+		<br><br>
 		<!-- Submit Button -->
-		<button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
- 		Submit</button>
-
+		<button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">Submit</button>
 		<hr>
-	    <footer class="footer">
-	      <div class="container">
-		  <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/androosk/ohanafinder">GitHub Repo</a></p>
-	      </div>
-	    </footer>
-
 	</div>
-
-	<!-- Modal -->
+	<div class="container">
+		<p><a href="/api/ohana">API Ohana List</a> | <a href="https://github.com/androosk/ohanafinder">GitHub Repo</a></p>
+	</div>
+	<!-- Bootstrap Modal for displaying survey results -->
 	<div id="resultsModal" class="modal fade" role="dialog">
 	  <div class="modal-dialog">
 
-	    <!-- Modal content-->
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -188,7 +170,7 @@
 
   <script type="text/javascript">
 
-  	// Chosen CSS
+  	// CSS Styling for survey drop downs from Chosen.js
     var config = {
       '.chosen-select'           : {},
       '.chosen-select-deselect'  : {allow_single_deselect:true},
@@ -206,17 +188,18 @@
     	// Form validation
     	function validateForm() {
 		  var isValid = true;
-		  $('.form-control').each(function() {
-		    if ( $(this).val() === '' )
+		  $('.form-control').each(function(){
+		    if ($(this).val() === '' )
 		        isValid = false;
 		  });
 
 		  $('.chosen-select').each(function() {
 
-		  	if( $(this).val() === "")
+		  	if($(this).val() === '')
 		  		isValid = false
 		  })
-		  return isValid;
+			return isValid
+			console.log(isValid)
 		}
 
 		// If all required fields are filled
@@ -224,52 +207,37 @@
 		{
 			// Create an object for the user's data
 	    	var userData = {
-	    		name: $("#name").val(),
-	    		photo: $("#photo").val(),
-	    		scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), ]
+	    		name: $('#name').val(),
+	    		photo: $('#photo').val(),
+	    		scores: [$('#question-one').val(), $('#question-two').val(), $('#question-three').val(), $('#question-four').val(), $('#question-five').val(), $('#question-six').val(), $('#question-seven').val(), $('#question-eight').val(), $('#question-nine').val(), $('#question-ten').val()]
 	    	}
+				console.log(userData)
+
+//TODO Iterate over current object to get closest match and display it below
+
 
 
 	    	// Grab the URL of the website
-	    	var currentURL = window.location.origin;
+				var currentURL = window.location.origin;
+				console.log(currentURL)
 
 	    	// AJAX post the data to the friends API.
-	    	$.post(currentURL + "/api/friends", userData, function(data){
+	    	$.post(currentURL + '/api/ohana', userData, function(data){
 
 	    		// Grab the result from the AJAX post so that the best match's name and photo are displayed.
-	    		$("#matchName").text(data.name);
-	    		$('#matchImg').attr("src", data.photo);
+	    		$('#matchName').text(data.name)
+	    		$('#matchImg').attr('src', data.photo)
 		    	// Show the modal with the best match
-		    	$("#resultsModal").modal('toggle');
+		    	$('#resultsModal').modal('toggle')
 
 	    	});
 		}
 		else
 		{
-			alert("Please fill out all fields before submitting!");
+			alert('Please fill out all fields before submitting!')
 		}
-
-    	return false;
-    });
-
-
+    	return false
+    })
   </script>
-
-
 </body>
 </html>
-
-<!-- Compatibility should be determined based on the following.
-
-Each user's results should be converted into a simple array of numbers (ex: [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]).
-You will then compare the difference between the user's scores against other users' scores, question by question. You will then add up the differences to calculate the totalDifference.
-Example:
-User 1: [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]
-User 2: [3, 2, 6, 4, 5, 1, 2, 5, 4, 1]
-Total Difference: 2 + 1 + 2 = 5
-Remember to use the absolute value of the differences (i.e 5-3 and 3-5 should both be 2).
-The person with the closest match should be the one with the "least" amount of difference.
-Once you've determined the closest match, display the result back to the user in the form of a modal pop-up.
-
-The result should display both t
- -->
