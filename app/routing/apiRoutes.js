@@ -26,37 +26,3 @@ module.exports = (app)=>{
     res.json(ohana[match])
   })
 }
-
-
-
-
-
-
-
-
-
-
-
-
-//     const userResponses = userInput.scores
-//     const matchName = ''
-//     const matchImage = ''
-//     const totalDiff = 100000
-
-//     for (let i = 0; i<ohana.length; i++) {
-//       console.log('poop')
-//       let diff = 0
-//       for (let j=0; j<userResponses.length; j++) {
-//         diff += Math.abs(friends[i].scores[j]-userResponses[j])
-//       }
-//       console.log(diff)
-//       if (diff < totalDiff) {
-//         totalDiff = diff
-//         matchName = ohana[i].name
-//         matchImage = ohana[i].photo
-//       }
-//     }
-//     ohana.push(user.input)
-//     res.json({status: 'OK', matchName: matchName, matchImage: matchImage})
-//   })
-// }
