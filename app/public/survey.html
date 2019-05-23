@@ -148,10 +148,8 @@
 	<!-- Bootstrap Modal for displaying survey results -->
 	<div id="resultsModal" class="modal fade" role="dialog">
 	  <div class="modal-dialog">
-
 	    <div class="modal-content">
 	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal">&times;</button>
 	        <h2 class="modal-title"><strong>Best Match</strong></h2>
 	      </div>
 	      <div class="modal-body">
@@ -159,17 +157,30 @@
 	        <img id="matchImg" src="" alt="">
 	      </div>
 	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
 	      </div>
 	    </div>
-
+	  </div>
+	</div>
+	<!-- Bootstrap Modal for failure to fill out all survey fields -->
+	<div id="failureModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h2 class="modal-title"><strong>Form Error</strong></h2>
+	      </div>
+	      <div class="modal-body">
+	        <h2>Please fill out all fields before submitting!</h2>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
 	  </div>
 	</div>
 
-<!-- //This section sends form data to our server -->
-
+<!-- //This section evaluates the form data, returns the closest match, and adds the user to the data set -->
   <script type="text/javascript">
-
   	// CSS Styling for survey drop downs from Chosen.js
     var config = {
       '.chosen-select'           : {},
@@ -181,29 +192,19 @@
     for (var selector in config) {
       $(selector).chosen(config[selector]);
     }
-
-    // Capture the form inputs
-    $("#submit").on("click", function(){
-
-    	// Form validation
+    // Validate and capture form data
+    $("#submit").on("click", ()=>{
     	function validateForm() {
 		  var isValid = true;
-		  $('.form-control').each(function(){
-		    if ($(this).val() === '' )
-		        isValid = false;
-		  });
-
-		  $('.chosen-select').each(function() {
-
-		  	if($(this).val() === '')
-		  		isValid = false
+		  $('.form-control, .chosen-select').each(function() {
+		    if (!$(this).val())
+						isValid = false;
 		  })
 			return isValid
-			console.log(isValid)
 		}
 
 		// If all required fields are filled
-		if (validateForm() == true)
+		if (validateForm())
 		{
 			// Create an object for the user's data
 	    	var userData = {
@@ -211,30 +212,18 @@
 	    		photo: $('#photo').val(),
 	    		scores: [$('#question-one').val(), $('#question-two').val(), $('#question-three').val(), $('#question-four').val(), $('#question-five').val(), $('#question-six').val(), $('#question-seven').val(), $('#question-eight').val(), $('#question-nine').val(), $('#question-ten').val()]
 	    	}
-				console.log(userData)
-
-//TODO Iterate over current object to get closest match and display it below
-
-
-
-	    	// Grab the URL of the website
-				var currentURL = window.location.origin;
-				console.log(currentURL)
-
-	    	// AJAX post the data to the friends API.
-	    	$.post(currentURL + '/api/ohana', userData, function(data){
-
+	    	// AJAX post the data to the ohana API.
+	    	$.post('/api/ohana', userData, function(data){
 	    		// Grab the result from the AJAX post so that the best match's name and photo are displayed.
 	    		$('#matchName').text(data.name)
-	    		$('#matchImg').attr('src', data.photo)
+	    		$('#matchImg').attr('src',data.photo)
 		    	// Show the modal with the best match
 		    	$('#resultsModal').modal('toggle')
-
 	    	});
 		}
-		else
+		else // If user has not filled out all survey fields, ask them to do so
 		{
-			alert('Please fill out all fields before submitting!')
+			$('#failureModal').modal('toggle')
 		}
     	return false
     })

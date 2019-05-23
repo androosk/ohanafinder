@@ -1,4 +1,4 @@
-const ohanaList = [
+let ohana = [
   {
     name: 'Cobra Bubbles',
     photo: 'https://vignette.wikia.nocookie.net/disney/images/5/55/Cobra_Bubbles_LAS.jpg/revision/latest/scale-to-width-down/516?cb=20151101211757',
@@ -31,4 +31,4 @@ const ohanaList = [
   }
 ]
 
-module.exports = ohanaList
+module.exports = ohana
