@@ -17,4 +17,4 @@ Find your Ohana with this online tool
 - jQuery
 - Javascript
 - Bootstrap
-- Choose.js
+- Chosen.js
